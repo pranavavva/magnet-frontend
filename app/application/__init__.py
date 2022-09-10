@@ -6,9 +6,10 @@ from . import routes, api
 # init plugins
 my_api = Api()
 
+
 def init_app() -> Flask:
     # init app object
-    app = Flask(__name__)
+    app = Flask(__name__, static_folder="../../build", static_url_path="/")
     app.config.from_object("config.Config")
 
     # attach plugins
