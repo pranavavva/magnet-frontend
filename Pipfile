@@ -10,6 +10,8 @@ marshmallow = "*"
 numpy = "*"
 pandas = "*"
 tensorflow = "*"
+marshmallow-dataclass = "*"
+flask-cors = "*"
 
 [dev-packages]
 gunicorn = "*"

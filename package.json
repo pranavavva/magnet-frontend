@@ -19,7 +19,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start:dev:server": "python app/wsgi.py",
+    "start:dev:server": "flask --app app/wsgi --debug run --host=0.0.0.0 --port=5000",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
