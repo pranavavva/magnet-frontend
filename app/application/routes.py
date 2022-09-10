@@ -1,7 +1,9 @@
 import os
 from flask import Blueprint, send_from_directory
 
-route_blueprint = Blueprint("route_blueprint", __name__, static_folder="../../build", static_url_path="/")
+route_blueprint = Blueprint(
+    "route_blueprint", __name__, static_folder="../../build", static_url_path="/"
+)
 
 
 @route_blueprint.route("/", defaults={"path": ""}, methods=["GET"])
