@@ -22,6 +22,7 @@
     "start:dev:backend": "flask --app app/wsgi --debug run --host=0.0.0.0 --port=5000",
     "start:dev:frontend": "react-scripts start",
     "start:dev": "concurrently -n 'frontend,backend' -c '#185cc9,#18c94d' 'npm run start:dev:frontend' 'npm run start:dev:backend'",
+    "start:prod": "npm run build && gunicorn --chdir ./app -w 4 -b 0.0.0.0:8000 wsgi:app --reload",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
